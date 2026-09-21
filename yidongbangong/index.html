@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动办公-高效灵活的远程协作与云端管理解决方案</title>
+    <meta name="description" content="移动办公专题页提供最新的移动办公软件评测、云端协作平台指南、远程工作管理技巧及移动办公安全防护知识，帮助企业和个人实现随时随地的高效工作。">
+    <meta name="keywords" content="移动办公, 远程办公, 云端协作, 移动应用, 远程管理">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #64748b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .stat-item p {
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        /* 核心价值/场景 */
+        .features {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 工具推荐/分类 */
+        .tools-section {
+            background-color: white;
+            padding: 4rem 0;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.5rem 1.5rem;
+            border: 1px solid var(--border-color);
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--text-light);
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .tool-thumb {
+            width: 100%;
+            height: 160px;
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .tool-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tool-info h4 {
+            font-size: 1.1rem;
+        }
+
+        .tool-info p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            background-color: #f1f5f9;
+            color: var(--secondary-color);
+            margin-top: 0.5rem;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            padding: 4rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h5 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            font-size: 0.875rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏导航链接 */
+            }
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                云办公指南
+            </a>
+            <nav class="nav-links">
+                <a href="#features">核心优势</a>
+                <a href="#tools">工具推荐</a>
+                <a href="#faq">常见问题</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+            <a href="#" class="cta-button">免费试用</a>
+        </div>
+    </header>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="container">
+            <h1>打破时空限制，<br>实现无缝移动办公</h1>
+            <p>探索最新的移动办公解决方案，从云端文档协作到即时通讯，助您在任何时间、任何地点高效管理项目与团队。</p>
+            <div style="display: flex; justify-content: center; gap: 1rem;">
+                <a href="#tools" class="cta-button" style="padding: 0.75rem 2rem; font-size: 1.1rem;">浏览工具库</a>
+                <a href="#features" style="padding: 0.75rem 2rem; background: white; color: var(--text-main); border: 1px solid var(--border-color); border-radius: 6px; font-weight: 600;">了解趋势</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>85%</h3>
+                    <p>企业已采用混合办公模式</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40%</h3>
+                    <p>工作效率提升</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>全球团队在线支持</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么选择移动办公？</h2>
+                <p>现代工作方式正在发生深刻变革，掌握核心能力是提升竞争力的关键。</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3>即时响应与决策</h3>
+                    <p>通过移动端实时接收消息、审批流程，确保重要决策不延误，错失商机。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>数据安全与同步</h3>
+                    <p>采用端到端加密技术，确保企业数据在移动端传输过程中的绝对安全，多设备实时同步。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>灵活的团队协作</h3>
+                    <p>打破物理隔阂，支持跨地域、跨部门的高效协同，让创意在移动中碰撞火花。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工具推荐 -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>热门移动办公工具推荐</h2>
+                <p>为您精选市面上主流且实用的移动办公软件，满足不同场景需求。</p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="filterTools('all')">综合推荐</button>
+                <button class="tab-btn" onclick="filterTools('communication')">即时通讯</button>
+                <button class="tab-btn" onclick="filterTools('document')">文档协作</button>
+                <button class="tab-btn" onclick="filterTools('project')">项目管理</button>
+            </div>
+
+            <div class="tool-grid" id="toolGrid">
+                <!-- 通讯类 -->
+                <div class="tool-item" data-category="communication">
+                    <div class="tool-thumb">
+                        <img src="https://picsum.photos/seed/comm1/400/300" alt="企业微信图标">
+                    </div>
+                    <div class="tool-info">
+                        <h4>企业微信</h4>
+                        <p>连接工作与生活，提供高效的沟通与协同工具。</p>
+                        <span class="tag">即时通讯</span>
+                    </div>
+                </div>
+                <div class="tool-item" data-category="communication">
+                    <div class="tool-thumb">
+                        <img src="https://picsum.photos/seed/comm2/400/300" alt="钉钉图标">
+                    </div>
+                    <div class="tool-info">
+                        <h4>钉钉</h4>
+                        <p>一站式智能移动办公平台，智能考勤与审批。</p>
+                        <span class="tag">即时通讯</span>
+                    </div>
+                </div>
+                <!-- 文档类 -->
+                <div class="tool-item" data-category="document">
+                    <div class="tool-thumb">
+                        <img src="https://picsum.photos/seed/doc1/400/300" alt="飞书图标">
+                    </div>
+                    <div class="tool-info">
+                        <h4>飞书</h4>
+                        <p>集成即时沟通、日历、在线文档、云盘等功能。</p>
+                        <span class="tag">文档协作</span>
+                    </div>
+                </div>
+                <div class="tool-item" data-category="document">
+                    <div class="tool-thumb">
+                        <img src="https://picsum.photos/seed/doc2/400/300" alt="石墨文档图标">
+                    </div>
+                    <div class="tool-info">
+                        <h4>石墨文档</h4>
+                        <p>支持多人实时在线编辑的协作文档工具。</p>
+                        <span class="tag">文档协作</span>
+                    </div>
+                </div>
+                <!-- 项目管理 -->
+                <div class="tool-item" data-category="project">
+                    <div class="tool-thumb">
+                        <img src="https://picsum.photos/seed/proj1/400/300" alt="Trello图标">
+                    </div>
+                    <div class="tool-info">
+                        <h4>Trello</h4>
+                        <p>基于看板的轻量级项目管理工具，直观易用。</p>
+                        <span class="tag">项目管理</span>
+                    </div>
+                </div>
+                <div class="tool-item" data-category="project">
+                    <div class="tool-thumb">
+                        <img src="https://picsum.photos/seed/proj2/400/300" alt="Teambition图标">
+                    </div>
+                    <div class="tool-info">
+                        <h4>Teambition</h4>
+                        <p>阿里旗下项目管理工具，专注于任务分配与进度追踪。</p>
+                        <span class="tag">项目管理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>移动办公常见问题</h2>
+                <p>关于移动办公的疑问与解答，帮助您更好地规划工作流程。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">移动办公是否意味着全天候待命？</div>
+                <div class="faq-answer">
+                    移动办公的核心在于“灵活”而非“强制”。合理的移动办公制度应明确工作时间和响应机制，避免员工因技术便利而过度劳累，影响长期工作效率。
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">如何保证移动办公期间的数据安全？</div>
+                <div class="faq-answer">
+                    企业应部署移动设备管理（MDM）系统，强制开启设备锁屏密码，并对敏感数据进行加密存储。同时，培训员工识别钓鱼链接和恶意软件，是安全防护的重要一环。
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">适合初创团队使用的轻量级移动办公方案有哪些？</div>
+                <div class="faq-answer">
+                    初创团队可以选择飞书、Teambition或石墨文档等工具。这些工具通常提供免费的基础版，能够满足即时通讯、任务分配和文档共享的基本需求，且上手简单。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5>关于我们</h5>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        我们致力于为企业和个人提供最前沿的移动办公资讯与工具评测，帮助您构建高效的数字化工作环境。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h5>快速链接</h5>
+                    <ul>
+                        <li><a href="#">工具下载</a></li>
+                        <li><a href="#">行业白皮书</a></li>
+                        <li><a href="#">企业服务</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>关注我们</h5>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">知乎专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 移动办公指南网. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 工具筛选逻辑
+        function filterTools(category) {
+            const items = document.querySelectorAll('.tool-item');
+            const buttons = document.querySelectorAll('.tab-btn');
+            
+            // 更新按钮状态
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // 筛选显示
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ 折叠逻辑
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
