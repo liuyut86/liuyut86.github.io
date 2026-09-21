@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一本道图片 - 提供高清一本道系列作品的高清图片展示、作品分类索引及在线预览服务。包含不同系列作品的视觉图鉴与详细资料。">
+    <meta name="keywords" content="一本道图片,一本道,一本道系列,一本道高清,一本道图集">
+    <title>一本道图片-高清系列作品图鉴与在线预览</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --secondary-color: #f8bbd0;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-main: #ffffff;
+            --text-muted: #b0b0b0;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(233, 30, 99, 0.1) 0%, rgba(26, 26, 26, 0) 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .search-bar {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid #444;
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--primary-color);
+        }
+
+        /* Filter Tags */
+        .filters {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            padding: 6px 16px;
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tag:hover, .tag.active {
+            background-color: rgba(233, 30, 99, 0.2);
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            padding-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-color: #444;
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            padding-top: 140%; /* 5:7 Aspect Ratio */
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .card-image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+            transition: opacity 0.3s, transform 0.5s;
+        }
+
+        .card:hover .card-image-wrapper img {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #d81b60;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #555;
+            color: var(--text-muted);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+            color: var(--text-main);
+        }
+
+        /* Info Section */
+        .info-section {
+            background-color: #252525;
+            padding: 60px 0;
+            border-top: 1px solid #333;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-text p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .info-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .info-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            line-height: 0;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            padding: 40px 0;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">一本道<span>图集</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">最新收录</a></li>
+                    <li><a href="#">系列分类</a></li>
+                    <li><a href="#">高清图库</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>一本道系列高清图片展示</h1>
+                <p>汇聚一本道旗下多部热门作品的精选高清剧照与人物图集，提供流畅的在线浏览体验。</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="搜索作品名称或系列...">
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <div class="container">
+            <div class="filters">
+                <div class="tag active">全部</div>
+                <div class="tag">系列一</div>
+                <div class="tag">系列二</div>
+                <div class="tag">系列三</div>
+                <div class="tag">精选合集</div>
+                <div class="tag">高清壁纸</div>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="section-title">
+                    <span>最新收录图片</span>
+                    <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">查看更多 &rarr;</a>
+                </div>
+                
+                <div class="gallery-grid">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card-image-wrapper">
+                            <span class="card-badge">HD</span>
+                            <img src="https://picsum.photos/seed/mh1/400/560" alt="一本道系列作品高清截图">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">一本道系列作品精选集</h3>
+                            <div class="card-meta">
+                                <span>2023-10-24</span>
+                                <span>1280 x 720</span>
+                            </div>
+                            <div class="card-actions">
+                                <div class="btn btn-primary">查看大图</div>
+                                <div class="btn btn-outline">收藏</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card-image-wrapper">
+                            <span class="card-badge">NEW</span>
+                            <img src="https://picsum.photos/seed/mh2/400/560" alt="一本道系列作品高清截图">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">一本道系列作品精选集</h3>
+                            <div class="card-meta">
+                                <span>2023-10-23</span>
+                                <span>1920 x 1080</span>
+                            </div>
+                            <div class="card-actions">
+                                <div class="btn btn-primary">查看大图</div>
+                                <div class="btn btn-outline">收藏</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card-image-wrapper">
+                            <span class="card-badge">HD</span>
+                            <img src="https://picsum.photos/seed/mh3/400/560" alt="一本道系列作品高清截图">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">一本道系列作品精选集</h3>
+                            <div class="card-meta">
+                                <span>2023-10-22</span>
+                                <span>1280 x 720</span>
+                            </div>
+                            <div class="card-actions">
+                                <div class="btn btn-primary">查看大图</div>
+                                <div class="btn btn-outline">收藏</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <div class="card-image-wrapper">
+                            <span class="card-badge">HD</span>
+                            <img src="https://picsum.photos/seed/mh4/400/560" alt="一本道系列作品高清截图">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">一本道系列作品精选集</h3>
+                            <div class="card-meta">
+                                <span>2023-10-21</span>
+                                <span>1920 x 1080</span>
+                            </div>
+                            <div class="card-actions">
+                                <div class="btn btn-primary">查看大图</div>
+                                <div class="btn btn-outline">收藏</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="card">
+                        <div class="card-image-wrapper">
+                            <span class="card-badge">HD</span>
+                            <img src="https://picsum.photos/seed/mh5/400/560" alt="一本道系列作品高清截图">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">一本道系列作品精选集</h3>
+                            <div class="card-meta">
+                                <span>2023-10-20</span>
+                                <span>1280 x 720</span>
+                            </div>
+                            <div class="card-actions">
+                                <div class="btn btn-primary">查看大图</div>
+                                <div class="btn btn-outline">收藏</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="card">
+                        <div class="card-image-wrapper">
+                            <span class="card-badge">HD</span>
+                            <img src="https://picsum.photos/seed/mh6/400/560" alt="一本道系列作品高清截图">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">一本道系列作品精选集</h3>
+                            <div class="card-meta">
+                                <span>2023-10-19</span>
+                                <span>1920 x 1080</span>
+                            </div>
+                            <div class="card-actions">
+                                <div class="btn btn-primary">查看大图</div>
+                                <div class="btn btn-outline">收藏</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <div class="container info-grid">
+                <div class="info-text">
+                    <h2>关于图片资源</h2>
+                    <p>本站致力于提供高清、清晰的图片展示服务。所有图片资源均来自公开渠道，仅供个人学习与欣赏使用。我们注重图片的画质还原与浏览体验。</p>
+                    <p>如果您对某部作品感兴趣，建议通过官方渠道获取正版授权内容。</p>
+                    <ul class="info-list">
+                        <li>每日更新最新收录图集</li>
+                        <li>支持多分辨率高清预览</li>
+                        <li>响应式设计，手机电脑均可访问</li>
+                        <li>严格遵循版权保护原则</li>
+                    </ul>
+                </div>
+                <div class="info-text">
+                    <h2>浏览指南</h2>
+                    <p>为了获得最佳的浏览体验，建议在稳定的网络环境下查看高清图片。页面采用网格布局，支持分类筛选与搜索功能。</p>
+                    <p>如果您在浏览过程中遇到任何问题，可以通过网站提供的联系方式进行反馈。</p>
+                    <ul class="info-list">
+                        <li>使用标签快速定位系列</li>
+                        <li>点击“查看大图”进入详情页</li>
+                        <li>支持一键收藏常用作品</li>
+                        <li>定期清理浏览器缓存</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">免责声明</a>
+                <a href="#">隐私政策</a>
+                <a href="#">联系我们</a>
+                <a href="#">版权声明</a>
+            </div>
+            <p>&copy; 2023 一本道图片展示网 版权所有.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
