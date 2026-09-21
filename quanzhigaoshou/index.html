@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全职高手小说免费阅读-荣耀网游史诗巨作与叶修故事</title>
+    <meta name="description" content="提供全职高手小说免费阅读，详细解析叶修、荣耀网游、兴欣网吧及十大职业攻略。包含最新章节更新、角色关系图及经典语录。">
+    <meta name="keywords" content="全职高手小说免费阅读,全职高手,叶修,荣耀网游,小说在线阅读">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #1a237e;
+            --accent-color: #ffca28;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f5f5f5;
+            --bg-card: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-read {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .btn-read:hover {
+            background-color: #b71c1c;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a237e 0%, #311b92 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags span {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin: 0 4px;
+        }
+
+        /* Section Layout */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        /* Character Cards */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .char-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .char-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .char-img {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            object-fit: cover;
+        }
+
+        .char-info {
+            padding: 16px;
+        }
+
+        .char-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .char-title {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .char-desc {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Content Area */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        /* Chapter List */
+        .chapter-list {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-title {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chapter-title::before {
+            content: '📖';
+            font-size: 1.2rem;
+        }
+
+        .chapter-date {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* Reading Mode Simulation */
+        .reader-container {
+            background: #fff;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .reader-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .reader-content p {
+            margin-bottom: 16px;
+            text-align: justify;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            text-indent: 2em;
+        }
+
+        .reader-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .reader-btn {
+            padding: 10px 24px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .reader-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #263238;
+            color: #cfd8dc;
+            padding: 40px 0 20px;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #37474f;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            nav ul {
+                margin: 10px 0;
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .reader-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span>👑</span> 荣耀书城
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">全本小说</a></li>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">作者专区</a></li>
+            </ul>
+        </nav>
+        <a href="#reader" class="btn-read">开始阅读</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>全职高手小说免费阅读</h1>
+        <p>重温荣耀世界，见证叶修带领兴欣战队重返巅峰的传奇故事。这里有最全的章节、最详尽的职业解析和最热血的竞技回忆。</p>
+        <div class="hero-tags">
+            <span>网游竞技</span>
+            <span>热血战斗</span>
+            <span>团战策略</span>
+            <span>全职高手</span>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+
+    <!-- Character Introduction -->
+    <section id="characters">
+        <div class="section-title">
+            <span>核心角色介绍</span>
+            <a href="#">查看全部 &rarr;</a>
+        </div>
+        <div class="grid-4">
+            <article class="char-card">
+                <img src="https://picsum.photos/seed/yexiu/400/300" alt="叶修" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">叶修</h3>
+                    <p class="char-title">荣耀教科书 / 兴欣战队队长</p>
+                    <p class="char-desc">前顶尖职业选手，因种种原因被俱乐部驱逐。现为草根战队兴欣的队长，使用战斗法师“君莫笑”，在网游中重拾荣耀。</p>
+                </div>
+            </article>
+            <article class="char-card">
+                <img src="https://picsum.photos/seed/linsheng/400/300" alt="林敬言" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">林敬言</h3>
+                    <p class="char-title">蓝雨战队队长 / 战斗法师</p>
+                    <p class="char-desc">职业圈的老大哥，性格沉稳，是叶修的挚友之一。其战斗风格犀利，被称为“蓝雨一哥”，对叶修一直抱有极高的敬意。</p>
+                </div>
+            </article>
+            <article class="char-card">
+                <img src="https://picsum.photos/seed/bingbing/400/300" alt="苏沐橙" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">苏沐橙</h3>
+                    <p class="char-title">嘉世战队成员 / 指法大师</p>
+                    <p class="char-desc">叶修的青梅竹马，拥有极其高超的枪炮师操作技巧。从嘉世转投兴欣，成为叶修最得力的助手，两人默契十足。</p>
+                </div>
+            </article>
+            <article class="char-card">
+                <img src="https://picsum.photos/seed/zhengxun/400/300" alt="周泽楷" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">周泽楷</h3>
+                    <p class="char-title">轮回战队队长 / 枪炮师</p>
+                    <p class="char-desc">被誉为“枪王”，操作极其华丽且极具压迫感。沉默寡言，是众多职业选手心中最强的对手，也是叶修在荣耀道路上必须跨越的高山。</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Main Content & Sidebar -->
+    <div class="content-layout">
+        <!-- Chapter List -->
+        <section id="chapters">
+            <div class="section-title">
+                <span>最新章节更新</span>
+                <a href="#">历史章节 &rarr;</a>
+            </div>
+            <div class="chapter-list">
+                <article class="chapter-item">
+                    <a href="#" class="chapter-title">第1312章：战术博弈</a>
+                    <span class="chapter-date">2023-10-25</span>
+                </article>
+                <article class="chapter-item">
+                    <a href="#" class="chapter-title">第1311章：关键团战</a>
+                    <span class="chapter-date">2023-10-24</span>
+                </article>
+                <article class="chapter-item">
+                    <a href="#" class="chapter-title">第1310章：微操对决</a>
+                    <span class="chapter-date">2023-10-23</span>
+                </article>
+                <article class="chapter-item">
+                    <a href="#" class="chapter-title">第1309章：布局</a>
+                    <span class="chapter-date">2023-10-22</span>
+                </article>
+                <article class="chapter-item">
+                    <a href="#" class="chapter-title">第1308章：新的挑战</a>
+                    <span class="chapter-date">2023-10-21</span>
+                </article>
+                <article class="chapter-item">
+                    <a href="#" class="chapter-title">第1307章：荣耀之夜</a>
+                    <span class="chapter-date">2023-10-20</span>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" class="btn-read" style="font-size: 0.9rem;">加载更多章节</a>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="widget-title">热门标签</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">君莫笑</a>
+                    <a href="#" class="tag">叶修</a>
+                    <a href="#" class="tag">蓝河</a>
+                    <a href="#" class="tag">包子</a>
+                    <a href="#" class="tag">唐柔</a>
+                    <a href="#" class="tag">魏琛</a>
+                    <a href="#" class="tag">周泽楷</a>
+                    <a href="#" class="tag">苏沐秋</a>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">十大职业推荐</h3>
+                <ul style="list-style: none;">
+                    <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between;">
+                        <a href="#">战斗法师</a> <span style="color: #999;">★ 5.0</span>
+                    </li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between;">
+                        <a href="#">枪炮师</a> <span style="color: #999;">★ 4.8</span>
+                    </li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between;">
+                        <a href="#">魔剑士</a> <span style="color: #999;">★ 4.9</span>
+                    </li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between;">
+                        <a href="#">漫游枪手</a> <span style="color: #999;">★ 4.7</span>
+                    </li>
+                    <li style="padding: 8px 0; display: flex; justify-content: space-between;">
+                        <a href="#">元素法师</a> <span style="color: #999;">★ 4.6</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget" style="background: #e3f2fd; border: 1px solid #bbdefb;">
+                <h3 class="widget-title" style="border: none;">阅读提示</h3>
+                <p style="font-size: 0.9rem; color: #455a64;">
+                    本站提供全职高手小说免费阅读内容。本站资源均来自网络，仅供学习交流，请勿用于商业用途。如有版权问题，请联系我们删除。
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Reader Section -->
+    <section id="reader" style="margin-top: 40px;">
+        <div class="section-title">
+            <span>精彩试读：荣耀之巅</span>
+        </div>
+        <div class="reader-container">
+            <div class="reader-content">
+                <h2>第1312章：战术博弈</h2>
+                <p>兴欣战队的会议室里，气氛凝重得仿佛能滴出水来。巨大的投影屏幕上，正播放着昨天那场关键比赛的录像回放。叶修坐在长桌的一端，手指轻轻敲击着桌面，目光始终没有离开屏幕。</p>
+                <p>“这一波团战，如果苏沐橙的走位再快0.5秒，我们就死定了。”周泽楷靠在椅背上，声音依旧平淡，但眉头却微微皱起。</p>
+                <p>“0.5秒？”叶修抬起头，嘴角勾起一抹意味深长的笑容，“小周，你知道在荣耀里，0.5秒意味着什么吗？”</p>
+                <p>“意味着生死。”魏琛从旁边拿起茶杯，抿了一口，“老叶，你这一手‘龙抬头’的预判，简直神了。如果不是你提前布置了陷阱，咱们还真不一定能翻盘。”</p>
+                <p>叶修站起身，走到屏幕前，手指在战术板上重重地点了几下。“荣耀从来都不是一个人的游戏，它是团队的艺术。无论是君莫笑的散人形态，还是我们每个人的职业定位，都要服从于大局。”</p>
+                <p>“那么，下一场比赛，对手是轮回？”唐柔推了推眼镜，眼中闪烁着光芒，“我已经迫不及待想要见识一下，枪王的真实实力了。”</p>
+                <p>“轮回吗……”叶修沉吟片刻，目光变得深邃，“无论对手是谁，我们的目标只有一个——冠军。只要站在赛场上，就没有拿不下的胜利。”</p>
+                <p>会议室里响起了一阵低沉的掌声。在这个充满激情与梦想的赛场上，每一个字句都承载着重量，每一次呼吸都为了同一个目标。荣耀之路，道阻且长，但他们从未退缩。</p>
+            </div>
+            <div class="reader-nav">
+                <a href="#" class="reader-btn">上一章</a>
+                <span style="line-height: 36px;">第1312章</span>
+                <a href="#" class="reader-btn">下一章</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="margin-top: 60px; margin-bottom: 60px;">
+        <div class="section-title">
+            <span>常见问题 (FAQ)</span>
+        </div>
+        <div class="grid-4">
+            <article style="background: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+                <h3 style="margin-bottom: 10px; color: var(--primary-color);">Q: 全职高手小说在哪里看？</h3>
+                <p style="font-size: 0.9rem; color: var(--text-light);">A: 本站提供全职高手小说免费阅读，您可以点击上方“开始阅读”直接进入阅读页面，支持手机和电脑端访问。</p>
+            </article>
+            <article style="background: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+                <h3 style="margin-bottom: 10px; color: var(--primary-color);">Q: 小说更新频率是怎样的？</h3>
+                <p style="font-size: 0.9rem; color: var(--text-light);">A: 我们会第一时间同步正版作者的更新进度，确保读者能第一时间看到最新的章节内容。</p>
+            </article>
+            <article style="background: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+                <h3 style="margin-bottom: 10px; color: var(--primary-color);">Q: 叶修的角色原型是谁？</h3>
+                <p style="font-size: 0.9rem; color: var(--text-light);">A: 叶修是蝴蝶蓝所著小说《全职高手》中的男主角，其原型参考了电竞圈中多位顶尖选手的特质。</p>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>关于我们</h3>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    荣耀书城致力于为小说爱好者提供优质的免费阅读体验。我们汇聚了海量的热门小说资源，涵盖玄幻、都市、电竞、历史等多个领域。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>快速导航</h3>
+                <ul>
+                    <li><a href="#">全本小说</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">热门推荐</a></li>
+                    <li><a href="#">作者投稿</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>友情链接</h3>
+                <ul>
+                    <li><a href="#">起点中文网</a></li>
+                    <li><a href="#">纵横中文网</a></li>
+                    <li><a href="#">飞卢小说网</a></li>
+                    <li><a href="#">晋江文学城</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 荣耀书城 版权所有 | 全职高手小说免费阅读资源站</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+  </html>
