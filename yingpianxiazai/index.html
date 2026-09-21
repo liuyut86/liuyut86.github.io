@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影片下载-高清影视资源与下载指南</title>
+    <meta name="description" content="提供最新的影片下载服务，涵盖高清电影、热门电视剧、纪录片及动漫资源。详细介绍下载格式选择、速度优化及版权注意事项，助您安全、高效地获取所需影视内容。">
+    <meta name="keywords" content="影片下载,高清电影下载,影视资源,4K资源,蓝光下载">
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --primary-hover: #b20710;
+            --bg-dark: #141414;
+            --bg-card: #1f1f1f;
+            --text-main: #ffffff;
+            --text-secondary: #b3b3b3;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-unit);
+            padding-left: var(--spacing-unit);
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: normal;
+        }
+
+        .section-title a:hover {
+            color: var(--text-main);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            width: 200px;
+            outline: none;
+        }
+
+        .search-bar button {
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            padding: 0 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-bar button:hover {
+            background: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('https://picsum.photos/seed/cinema/1200/600') no-repeat center center/cover;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .card-body {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .card-tags span {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            background: #333;
+            border-radius: 2px;
+            margin-right: 4px;
+            color: #ccc;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .download-btn {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .download-btn:hover {
+            text-decoration: underline;
+        }
+
+        .quality-badge {
+            font-size: 0.75rem;
+            color: #46d369;
+            font-weight: bold;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: #1a1a1a;
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .guide-item {
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            border-top: 3px solid #333;
+        }
+
+        .guide-item h3 {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .guide-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .guide-item ol {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .guide-item li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 3rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #333;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 3rem 0;
+            margin-top: auto;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--text-main);
+        }
+
+        .disclaimer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #222;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">FilmDown</a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">最新更新</a>
+                <a href="#">高清电影</a>
+                <a href="#">国产剧集</a>
+                <a href="#">纪录片</a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索影片...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索高清影片下载资源库</h1>
+                <p>汇集全网最新上映电影与经典剧集，支持蓝光、4K等多种格式，提供稳定的高速下载通道。</p>
+                <a href="#" class="cta-btn">开始浏览</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Featured Categories -->
+            <section class="section-title">
+                <h2>热门分类</h2>
+                <a href="#">查看全部 &raquo;</a>
+            </section>
+            <div class="content-grid">
+                <div class="card">
+                    <img src="https://picsum.photos/seed/action/400/600" alt="动作片" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">动作冒险</h3>
+                        <div class="card-meta">1,204 部影片</div>
+                        <div class="card-footer">
+                            <span class="quality-badge">4K</span>
+                            <a href="#" class="download-btn">下载</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/scifi/400/600" alt="科幻片" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">科幻奇幻</h3>
+                        <div class="card-meta">856 部影片</div>
+                        <div class="card-footer">
+                            <span class="quality-badge">蓝光</span>
+                            <a href="#" class="download-btn">下载</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/drama/400/600" alt="剧情片" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">剧情文艺</h3>
+                        <div class="card-meta">2,100 部影片</div>
+                        <div class="card-footer">
+                            <span class="quality-badge">1080P</span>
+                            <a href="#" class="download-btn">下载</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/cartoon/400/600" alt="动画片" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">欧美动漫</h3>
+                        <div class="card-meta">540 部影片</div>
+                        <div class="card-footer">
+                            <span class="quality-badge">4K</span>
+                            <a href="#" class="download-btn">下载</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Latest Downloads -->
+            <section class="section-title">
+                <h2>最新影片下载</h2>
+                <a href="#">查看全部 &raquo;</a>
+            </section>
+            <div class="content-grid">
+                <div class="card">
+                    <img src="https://picsum.photos/seed/movie1/400/600" alt="电影封面" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">星际穿越：重启版</h3>
+                        <div class="card-meta">2023 | 科幻 / 冒险</div>
+                        <div class="card-tags">
+                            <span>1080P</span>
+                            <span>DTS</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="quality-badge">4.2GB</span>
+                            <a href="#" class="download-btn">立即下载</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/movie2/400/600" alt="电影封面" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">城市猎人：暗夜行动</h3>
+                        <div class="card-meta">2023 | 动作 / 犯罪</div>
+                        <div class="card-tags">
+                            <span>4K</span>
+                            <span>HDR</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="quality-badge">15.6GB</span>
+                            <a href="#" class="download-btn">立即下载</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/movie3/400/600" alt="电影封面" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">迷雾中的真相</h3>
+                        <div class="card-meta">2023 | 悬疑 / 惊悚</div>
+                        <div class="card-tags">
+                            <span>1080P</span>
+                            <span>WEB-DL</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="quality-badge">2.1GB</span>
+                            <a href="#" class="download-btn">立即下载</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/movie4/400/600" alt="电影封面" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">深海探险记</h3>
+                        <div class="card-meta">2022 | 纪录片</div>
+                        <div class="card-tags">
+                            <span>4K</span>
+                            <span>杜比视界</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="quality-badge">8.8GB</span>
+                            <a href="#" class="download-btn">立即下载</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Guide Section -->
+            <section class="guide-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>下载指南与帮助</h2>
+                    </div>
+                    <div class="guide-grid">
+                        <div class="guide-item">
+                            <h3>如何选择下载格式？</h3>
+                            <p>根据您的播放设备选择合适的分辨率。手机和平板建议选择 720P 或 1080P，电脑大屏显示器建议选择 1080P 或 4K 蓝光原盘。</p>
+                            <ol>
+                                <li>查看影片简介中的分辨率标注。</li>
+                                <li>根据您的网络带宽计算预计下载时间。</li>
+                                <li>确保硬盘有足够的剩余空间。</li>
+                            </ol>
+                        </div>
+                        <div class="guide-item">
+                            <h3>常见下载工具推荐</h3>
+                            <p>为了获得最佳体验，建议使用支持多线程下载的工具，如 IDA、迅雷或支持 BT 协议的客户端。</p>
+                            <ol>
+                                <li>下载并安装支持 BT 协议的客户端。</li>
+                                <li>复制页面上的种子链接或磁力链接。</li>
+                                <li>粘贴到客户端中开始高速下载。</li>
+                            </ol>
+                        </div>
+                        <div class="guide-item">
+                            <h3>安全注意事项</h3>
+                            <p>在下载过程中请注意保护个人隐私，避免点击页面上的不明弹窗广告，建议安装杀毒软件定期扫描下载文件。</p>
+                            <ol>
+                                <li>优先选择带有“安全认证”标识的下载源。</li>
+                                <li>下载后使用杀毒软件进行全盘扫描。</li>
+                                <li>支持正版，尊重创作者版权。</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="section-title">
+                    <h2>常见问题解答 (FAQ)</h2>
+                </div>
+                <div class="faq-item active">
+                    <div class="faq-question">下载速度很慢怎么办？</div>
+                    <div class="faq-answer">下载速度受网络带宽、服务器负载以及下载工具设置影响。建议检查网络连接，更换下载工具，或选择非高峰时段进行下载。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">下载的影片无法播放？</div>
+                    <div class="faq-answer">请检查影片的编码格式（如 MKV, MP4）是否与您的播放器兼容。如果文件损坏，请重新下载或尝试修复工具。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">支持手机直接下载吗？</div>
+                    <div class="faq-answer">是的，本站提供移动端适配页面，您可以直接在手机浏览器中访问并使用内置下载功能。</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>FilmDown 致力于为用户提供便捷的影视资源下载服务。我们精选全球优质内容，力求为您提供高清、稳定的下载体验。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">最新上映</a></li>
+                        <li><a href="#">热门榜单</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱: support@filmdown.example</li>
+                        <li>地址: 互联网数据中转站</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <p>本站所有资源均来自互联网，仅供个人学习交流使用，请在下载后24小时内删除。版权归原作者所有，请支持正版影视作品。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // Simple FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+                  </html>
