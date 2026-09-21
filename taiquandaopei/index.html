@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="跆拳道培训班专业培训服务，提供少儿跆拳道、成人防身术、品势竞技及考级指导。拥有专业教练团队，科学训练体系，安全教学环境，助力学员提升身体素质与意志品质。">
+    <meta name="keywords" content="跆拳道培训班,少儿跆拳道,成人跆拳道,跆拳道考级,跆拳道培训">
+    <title>跆拳道培训班-专业少儿与成人跆拳道培训中心</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #D4AF37; /* 香槟金，代表荣誉与品质 */
+            --primary-dark: #B59226;
+            --secondary-color: #1a1a1a; /* 深黑，代表力量与稳重 */
+            --accent-color: #e74c3c; /* 红色，代表竞技与激情 */
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+
+        .cta-btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/seed/tkd_hero/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--secondary-color);
+        }
+
+        /* 优势特点 */
+        .features {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: currentColor;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 课程分类 */
+        .courses {
+            padding: 80px 0;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .course-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .course-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .course-card:hover .course-image img {
+            transform: scale(1.05);
+        }
+
+        .course-content {
+            padding: 25px;
+        }
+
+        .course-tag {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .course-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .course-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* 师资力量 */
+        .coaches {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .coach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .coach-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .coach-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 3px solid var(--primary-color);
+            padding: 3px;
+        }
+
+        .coach-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .coach-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .coach-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .coach-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* 常见问题 */
+        .faq {
+            padding: 80px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-light);
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-contact li {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏菜单 */
+            }
+
+            .nav-wrapper {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>🥋</span> 跆拳道专业培训
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="active">首页</a>
+                <a href="#courses">课程体系</a>
+                <a href="#features">教学优势</a>
+                <a href="#coaches">师资团队</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#contact" class="cta-btn">免费预约试课</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>强身健体 · 磨练意志 · 荣耀竞技</h1>
+                <p>专业跆拳道培训班，致力于为学员提供科学、安全、高效的训练环境。无论您是初学者还是进阶选手，都能在这里找到属于自己的舞台。</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn-primary">查看课程</a>
+                    <a href="#contact" class="btn-outline">预约体验</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>为什么选择我们的跆拳道培训班</h2>
+                    <p>我们提供全方位的跆拳道教育服务，关注学员的身心全面发展</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <!-- Shield Icon -->
+                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        </div>
+                        <h3>安全保障</h3>
+                        <p>所有场地均配备专业护具，教练持证上岗，严格把控教学安全，让家长放心。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <!-- Trophy Icon -->
+                            <svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
+                        </div>
+                        <h3>考级认证</h3>
+                        <p>定期组织中国跆拳道协会考级，颁发权威证书，记录学员成长轨迹。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <!-- Users Icon -->
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <h3>科学分级</h3>
+                        <p>根据学员年龄和体能制定分级教学计划，因材施教，循序渐进提升。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses">
+            <div class="container">
+                <div class="section-header">
+                    <h2>特色课程体系</h2>
+                    <p>针对不同年龄段和需求，定制专属训练方案</p>
+                </div>
+                <div class="course-grid">
+                    <article class="course-card">
+                        <div class="course-image">
+                            <img src="https://picsum.photos/seed/kids_tkd/600/400.jpg" alt="少儿跆拳道">
+                        </div>
+                        <div class="course-content">
+                            <span class="course-tag">少儿启蒙</span>
+                            <h3 class="course-title">少儿趣味跆拳道</h3>
+                            <p class="course-desc">通过游戏化教学培养孩子兴趣，锻炼协调性与反应能力，塑造自信品格。</p>
+                            <div class="course-info">
+                                <span class="info-item">⏰ 90分钟/课</span>
+                                <span class="info-item">👥 4-8人小班</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-image">
+                            <img src="https://picsum.photos/seed/adult_tkd/600/400.jpg" alt="成人防身术">
+                        </div>
+                        <div class="course-content">
+                            <span class="course-tag">成人塑形</span>
+                            <h3 class="course-title">成人实战防身术</h3>
+                            <p class="course-desc">结合跆拳道腿法与格斗技巧，快速燃烧脂肪，提升自卫能力与自信心。</p>
+                            <div class="course-info">
+                                <span class="info-item">⏰ 120分钟/课</span>
+                                <span class="info-item">👥 随到随学</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-image">
+                            <img src="https://picsum.photos/seed/competition/600/400.jpg" alt="竞技特训">
+                        </div>
+                        <div class="course-content">
+                            <span class="course-tag">竞技进阶</span>
+                            <h3 class="course-title">竞技比赛特训</h3>
+                            <p class="course-desc">针对比赛规则与战术，进行高强度模拟对抗训练，冲击省市级奖项。</p>
+                            <div class="course-info">
+                                <span class="info-item">⏰ 每日集训</span>
+                                <span class="info-item">👥 专项教练</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coaches Section -->
+        <section id="coaches" class="coaches">
+            <div class="container">
+                <div class="section-header">
+                    <h2>专业师资团队</h2>
+                    <p>由资深黑带教练领衔，拥有多年教学与比赛经验</p>
+                </div>
+                <div class="coach-grid">
+                    <div class="coach-card">
+                        <div class="coach-avatar">
+                            <img src="https://picsum.photos/seed/coach1/200/200.jpg" alt="教练头像">
+                        </div>
+                        <h3 class="coach-name">李教练</h3>
+                        <p class="coach-title">黑带四段 / 教练总监</p>
+                        <p class="coach-desc">前省队主力队员，拥有15年执教经验，擅长竞技战术分析与少儿心理引导。</p>
+                    </div>
+                    <div class="coach-card">
+                        <div class="coach-avatar">
+                            <img src="https://picsum.photos/seed/coach2/200/200.jpg" alt="教练头像">
+                        </div>
+                        <h3 class="coach-name">王教练</h3>
+                        <p class="coach-title">黑带二段 / 少儿主管</p>
+                        <p class="coach-desc">国家二级运动员，亲和力强，致力于将跆拳道礼仪融入日常教学。</p>
+                    </div>
+                    <div class="coach-card">
+                        <div class="coach-avatar">
+                            <img src="https://picsum.photos/seed/coach3/200/200.jpg" alt="教练头像">
+                        </div>
+                        <h3 class="coach-name">张教练</h3>
+                        <p class="coach-title">黑带三段 / 器械训练</p>
+                        <p class="coach-desc">专注力量与体能训练，帮助学员突破体能瓶颈，提升动作爆发力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>学员家长常见问题</h2>
+                    <p>关于报名、训练及考级的疑问解答</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">需要自带装备吗？</button>
+                        <div class="faq-answer">
+                            <p>初次上课建议自带运动服和运动鞋。我们的道馆提供全套道服（大号、中号、小号）和护具租赁服务，您可以先体验再决定是否购买。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">零基础可以参加吗？</button>
+                        <div class="faq-answer">
+                            <p>完全可以。我们的少儿课程和成人课程都设有基础班，教练会从最基础的站姿、礼仪和基本腿法开始教学，不用担心跟不上。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">多久可以考级？</button>
+                        <div class="faq-answer">
+                            <p>一般情况下，少儿学员每3个月可参加一次考级评估，成人学员根据学习进度灵活安排。考级费用包含在年度会费中（视具体套餐而定）。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">受伤了怎么办？</button>
+                        <div class="faq-answer">
+                            <p>我们的道馆配有急救箱，教练均接受过急救培训。训练中如果发生轻微扭伤，会立即进行冰敷处理。严重情况会第一时间送医并通知家长。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / CTA Section -->
+        <section id="contact" style="background-color: var(--secondary-color); padding: 80px 0; text-align: center; color: white;">
+            <div class="container">
+                <h2 style="font-size: 2rem; margin-bottom: 20px;">立即预约免费试课</h2>
+                <p style="margin-bottom: 40px; opacity: 0.8;">前10名预约的学员赠送价值299元的道服体验装一套</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:010-12345678" class="btn-primary" style="background-color: var(--primary-color); color: white;">📞 010-12345678</a>
+                    <a href="#" class="btn-outline" style="border-color: white; color: white;">💬 在线咨询</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">致力于推广跆拳道运动，培养德智体美劳全面发展的优秀人才。拥有标准化场馆与专业教学体系。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#courses">课程介绍</a></li>
+                        <li><a href="#coaches">教练团队</a></li>
+                        <li><a href="#faq">学员问答</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>培训项目</h4>
+                    <ul>
+                        <li><a href="#">少儿兴趣班</a></li>
+                        <li><a href="#">青少年竞技班</a></li>
+                        <li><a href="#">成人防身术</a></li>
+                        <li><a href="#">企业团建拓展</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="footer-contact">
+                        <li><span>📍</span> 北京市朝阳区体育中心路88号</li>
+                        <li><span>📞</span> 010-12345678</li>
+                        <li><span>📧</span> contact@tkd-training.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 跆拳道专业培训中心 版权所有 | 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
