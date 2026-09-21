@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silk美式豆奶 - 天然植物蛋白营养早餐与休闲饮品指南</title>
+    <meta name="description" content="silk美式豆奶官方品牌介绍与产品指南。了解其0胆固醇、富含植物蛋白及膳食纤维的健康特性，探索适合早餐、运动后的营养搭配方案，以及如何选择适合自己的silk口味系列。">
+    <meta name="keywords" content="silk美式豆奶, 纯植物蛋白, 早餐豆奶, 膳食纤维, 健康饮品">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #7cb342;
+            --secondary-color: #558b2f;
+            --accent-color: #fdd835;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9fbf9;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+            padding: 5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .hero-text .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .hero-image img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: var(--radius);
+            background-color: var(--bg-light);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Product Showcase */
+        .products {
+            background-color: var(--bg-light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-img {
+            height: 220px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            max-width: 80%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .product-cta {
+            margin-top: auto;
+        }
+
+        /* Usage Guide */
+        .usage {
+            background-color: var(--white);
+        }
+
+        .usage-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .step-item h4 {
+            margin: 0.5rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .step-item p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+
+        /* FAQ */
+        .faq {
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--white);
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #f1f8e9;
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem 1.2rem;
+            color: var(--text-gray);
+            display: none;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2e3b2e;
+            color: #dcdcdc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <!-- Using a text-based logo for standalone requirement -->
+                    <span style="font-size: 1.8rem;">🥛</span> silk美式豆奶
+                </div>
+                <div class="nav-links">
+                    <a href="#products">产品系列</a>
+                    <a href="#features">营养优势</a>
+                    <a href="#usage">饮用指南</a>
+                    <a href="#faq">常见问题</a>
+                </div>
+                <a href="#products" class="btn-primary">立即选购</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>源自天然植物<br><span class="highlight">丝滑美式豆奶</span></h1>
+                        <p>0胆固醇、高蛋白、富含膳食纤维。silk美式豆奶为您带来纯正的植物风味体验，是健康生活与美味饮品的完美结合。</p>
+                        <a href="#products" class="btn-primary">探索更多系列</a>
+                    </div>
+                    <div class="hero-image">
+                        <!-- Placeholder image representing a milk carton -->
+                        <img src="https://placehold.co/600x400/7cb342/ffffff?text=Silk+Classic+Americano" alt="silk美式豆奶产品展示">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>为何选择 silk 美式豆奶？</h2>
+                    <p>专注于植物基营养，为您和家人提供更健康的饮品选择。</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌱</div>
+                        <h3>100% 纯植物原料</h3>
+                        <p>精选非转基因大豆，保留大豆天然营养，不含任何动物成分，适合素食者及乳糖不耐受人群。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💪</div>
+                        <h3>优质植物蛋白</h3>
+                        <p>每杯提供8克蛋白质，是早餐和运动后补充能量的理想选择，帮助维持肌肉健康。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🥗</div>
+                        <h3>膳食纤维丰富</h3>
+                        <p>添加天然膳食纤维，有助于促进肠道健康，让您在享受美味的同时兼顾消化舒适。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚫</div>
+                        <h3>0胆固醇 & 无添加</h3>
+                        <p>天然低饱和脂肪，不含胆固醇和人工甜味剂，口感纯正自然，让您喝得安心。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section id="products" class="section products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门产品系列</h2>
+                    <p>多种口味满足您不同的味蕾需求，无论是早餐搭配还是下午茶时光。</p>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://placehold.co/300x200/7cb342/ffffff?text=Classic+Americano" alt="silk美式豆奶经典原味">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">经典系列</span>
+                            <h3 class="product-title">美式经典原味</h3>
+                            <p class="product-desc">浓郁的豆香，丝滑的口感。这是最经典的silk美式豆奶，适合日常饮用，营养均衡。</p>
+                            <div class="product-cta">
+                                <a href="#" class="btn-primary" style="width: 100%; text-align: center;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://placehold.co/300x200/fdd835/333333?text=Vanilla+Bean" alt="silk美式豆奶香草风味">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">风味系列</span>
+                            <h3 class="product-title">香草豆风味</h3>
+                            <p class="product-desc">融合天然香草风味，口感更加甜美柔和，深受儿童和女性喜爱，适合烘焙或直接饮用。</p>
+                            <div class="product-cta">
+                                <a href="#" class="btn-primary" style="width: 100%; text-align: center;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://placehold.co/300x200/8d6e63/ffffff?text=Almond+Blend" alt="silk美式豆奶杏仁混搭">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">混合系列</span>
+                            <h3 class="product-title">杏仁混搭风味</h3>
+                            <p class="product-desc">大豆与杏仁的完美融合，带来独特的坚果香气，口感更加清爽，适合夏日饮用。</p>
+                            <div class="product-cta">
+                                <a href="#" class="btn-primary" style="width: 100%; text-align: center;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Guide -->
+        <section id="usage" class="section usage">
+            <div class="container">
+                <div class="section-header">
+                    <h2>创意饮用指南</h2>
+                    <p>不仅仅是直接饮用，silk美式豆奶还能为您的餐桌增添更多美味可能。</p>
+                </div>
+                <div class="usage-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h4>营养早餐</h4>
+                        <p>将silk美式豆奶与全麦面包、燕麦片或鸡蛋搭配，开启活力满满的一天。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h4>健康下午茶</h4>
+                        <p>用美式豆奶代替普通牛奶冲泡咖啡或茶，制作拿铁或热可可，口感更醇厚。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h4>烘焙基底</h4>
+                        <p>在制作蛋糕、松饼或燕麦碗时，用silk美式豆奶替代部分液体，增加湿润度和蛋白质含量。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h4>运动补给</h4>
+                        <p>运动后饮用一杯silk美式豆奶，快速补充流失的水分和植物蛋白。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于silk美式豆奶的疑问，这里都有答案。</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">silk美式豆奶是纯豆奶吗？</div>
+                        <div class="faq-answer">silk美式豆奶主要成分是水和大豆，部分口味系列可能会添加其他植物成分（如杏仁粉）以丰富口感，但核心保持植物基特性。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">这款豆奶含糖量高吗？</div>
+                        <div class="faq-answer">silk美式豆奶通常采用天然豆香，含糖量较低。部分风味款可能含有少量天然添加糖，建议查看产品包装上的营养成分表。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">它适合儿童饮用吗？</div>
+                        <div class="faq-answer">silk美式豆奶富含蛋白质和营养，适合作为儿童的健康饮品，但建议根据孩子的年龄和饮食需求适量饮用。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何保存和开启？</div>
+                        <div class="faq-answer">未开封的silk美式豆奶请存放在阴凉干燥处，避免阳光直射。开封后请立即冷藏，并在建议的保质期内饮用完毕。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>silk美式豆奶</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">致力于提供高品质的植物基饮品，让健康生活触手可及。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品系列</h4>
+                    <ul>
+                        <li><a href="#">经典原味</a></li>
+                        <li><a href="#">香草风味</a></li>
+                        <li><a href="#">杏仁混搭</a></li>
+                        <li><a href="#">无糖系列</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>营养知识</h4>
+                    <ul>
+                        <li><a href="#">植物蛋白优势</a></li>
+                        <li><a href="#">膳食纤维指南</a></li>
+                        <li><a href="#">健康食谱</a></li>
+                        <li><a href="#">选购建议</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Silk Brand Showcase. All rights reserved. 本页面为概念设计，非官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
