@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小黄瓜百科：了解小黄瓜的营养价值、食用功效、挑选技巧、家常做法及种植指南。提供健康饮食建议与护肤妙用，助您科学享用这一清爽蔬菜。">
+    <meta name="keywords" content="小黄瓜, 黄瓜, 清淡饮食, 营养价值, 家常菜谱, 挑选技巧">
+    <title>小黄瓜-营养功效、食用指南与家常食谱大全</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --primary-dark: #388E3C;
+            --accent-color: #8BC34A;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f9fbf9;
+            --bg-card: #ffffff;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .cta-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 60px 0;
+            background-color: var(--bg-card);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            background-color: var(--bg-body);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-color);
+            background-color: #fff;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+
+        .main-article {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .article-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .article-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            display: flex;
+            gap: 15px;
+        }
+
+        .article-body h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--text-main);
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+            color: #444;
+            text-align: justify;
+        }
+
+        .article-body ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .article-body li {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .highlight-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-card {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .recipe-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .recipe-list a {
+            color: var(--text-main);
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .recipe-list a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .recipe-img {
+            width: 80px;
+            height: 60px;
+            background-color: #eee;
+            border-radius: 4px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: 60px 0;
+            background-color: var(--bg-card);
+        }
+
+        .comparison-table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        tr:hover {
+            background-color: #fafafa;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #fcfcfc;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e2c;
+            color: #ccc;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-article {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>🥒</span> 小黄瓜
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#nutrition">营养价值</a></li>
+                    <li><a href="#selection">挑选技巧</a></li>
+                    <li><a href="#recipes">家常食谱</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#recipes" class="cta-btn">开始烹饪</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>清爽一夏，从“小黄瓜”开始</h1>
+                <p>小黄瓜不仅口感清脆，更富含水分与维生素。无论是凉拌、清炒还是制作饮品，它都是健康饮食的首选食材。了解如何挑选、清洗与烹饪，让每一口都充满自然鲜味。</p>
+                <div class="hero-tags">
+                    <span class="tag">低热量</span>
+                    <span class="tag">高水分</span>
+                    <span class="tag">维生素丰富</span>
+                    <span class="tag">美容养颜</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="nutrition">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么选择小黄瓜？</h2>
+                    <p>不仅仅是解渴，更是营养的宝库</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">💧</div>
+                        <h3>补水保湿</h3>
+                        <p>小黄瓜水分含量极高，有助于身体补水，缓解口渴，保持肌肤水润光泽。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">⚖️</div>
+                        <h3>低卡低脂</h3>
+                        <p>热量极低，富含膳食纤维，是减肥人士和健身餐中理想的配菜选择。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🧬</div>
+                        <h3>营养均衡</h3>
+                        <p>含有丰富的维生素C、维生素K、钾以及镁，对维持人体正常代谢至关重要。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>天然护肤</h3>
+                        <p>黄瓜中的酶和硅有助于舒缓皮肤，外用或内服都能起到一定的美容效果。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Main Article -->
+                    <article class="main-article">
+                        <header class="article-header">
+                            <h2>小黄瓜的全面食用指南</h2>
+                            <div class="article-meta">
+                                <span>更新时间：2023-10-24</span>
+                                <span>分类：饮食健康</span>
+                            </div>
+                        </header>
+                        
+                        <div class="article-body">
+                            <h3>1. 如何挑选优质小黄瓜</h3>
+                            <p>挑选小黄瓜时，首先看颜色。新鲜的小黄瓜通常呈深绿色，表皮带有细小的刺（白刺），这表示黄瓜非常新鲜。如果刺已经脱落，且表皮发黄，则可能已经过熟或存放过久。</p>
+                            <p>其次，看形状。优质的小黄瓜应该笔直、粗细均匀，避免选择弯曲、畸形或有明显伤痕的。弯曲的黄瓜往往口感较老，纤维较多。</p>
+                            <p>最后，掂重量。同样大小的黄瓜，手感较沉的通常水分更足，口感更脆嫩。</p>
+
+                            <div class="highlight-box">
+                                <strong>💡 简易清洗法：</strong> 将小黄瓜放入淡盐水中浸泡10-15分钟，可以去除表面的农药残留和杂质，然后再用清水冲洗干净即可。
+                            </div>
+
+                            <h3>2. 小黄瓜的常见吃法</h3>
+                            <p>小黄瓜的烹饪方式简单多样，最能保留其清脆口感和营养成分的是凉拌和快炒。</p>
+                            <ul>
+                                <li><strong>凉拌黄瓜：</strong> 切片或拍碎，加入蒜末、醋、香油、少许糖和辣椒油，搅拌均匀。这是最经典的家常做法，开胃解腻。</li>
+                                <li><strong>黄瓜炒鸡蛋：</strong> 将黄瓜切片与鸡蛋同炒，色彩鲜艳，口感清淡，适合老人和小孩。</li>
+                                <li><strong>黄瓜汁：</strong> 将小黄瓜连皮打汁饮用，加入少许蜂蜜，是极佳的天然排毒饮品。</li>
+                            </ul>
+
+                            <h3>3. 食用注意事项</h3>
+                            <p>虽然小黄瓜营养价值高，但脾胃虚寒的人群不宜过量生吃。建议将黄瓜加热烹饪，以减少对胃肠的刺激。此外，黄瓜性凉，不宜与富含维生素C分解酶的食材（如猕猴桃、番茄）大量同食，以免破坏营养成分。</p>
+                        </div>
+                    </article>
+
+                    <!-- Sidebar -->
+                    <aside>
+                        <!-- Recipe List -->
+                        <div class="sidebar-card">
+                            <h3>热门食谱推荐</h3>
+                            <ul class="recipe-list">
+                                <li>
+                                    <img src="https://picsum.photos/seed/cucumber1/80/60" alt="拍黄瓜" class="recipe-img">
+                                    <a href="#">经典拍黄瓜：开胃下饭</a>
+                                </li>
+                                <li>
+                                    <img src="https://picsum.photos/seed/cucumber2/80/60" alt="黄瓜炒虾仁" class="recipe-img">
+                                    <a href="#">黄瓜炒虾仁：高蛋白低脂</a>
+                                </li>
+                                <li>
+                                    <img src="https://picsum.photos/seed/cucumber3/80/60" alt="凉拌三丝" class="recipe-img">
+                                    <a href="#">凉拌三丝：清爽解腻</a>
+                                </li>
+                                <li>
+                                    <img src="https://picsum.photos/seed/cucumber4/80/60" alt="黄瓜鸡蛋汤" class="recipe-img">
+                                    <a href="#">黄瓜鸡蛋汤：快手早餐</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Quick Tips -->
+                        <div class="sidebar-card">
+                            <h3>挑选小贴士</h3>
+                            <p style="font-size: 0.9rem; color: #666;">
+                                <strong>✅ 推荐：</strong> 深绿色、带白刺、直身、沉手感。<br>
+                                <strong>❌ 避免：</strong> 发黄、刺脱落、弯曲、有伤口。
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="comparison-section" id="selection">
+            <div class="container">
+                <div class="section-title">
+                    <h2>小黄瓜 vs 普通黄瓜</h2>
+                    <p>了解不同品种的特点，选择最适合您的</p>
+                </div>
+                <div class="comparison-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>特点</th>
+                                <th>小黄瓜 (水果黄瓜)</th>
+                                <th>普通黄瓜 (菜黄瓜)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>外形尺寸</td>
+                                <td>较短小，直径约2-3厘米</td>
+                                <td>较长，直径约4-6厘米</td>
+                            </tr>
+                            <tr>
+                                <td>口感</td>
+                                <td>皮薄肉嫩，无刺或少刺，口感极脆</td>
+                                <td>皮稍厚，刺较多，口感较爽脆</td>
+                            </tr>
+                            <tr>
+                                <td>味道</td>
+                                <td>味道清淡，几乎无苦味</td>
+                                <td>味道稍浓，偶有微苦味</td>
+                            </tr>
+                            <tr>
+                                <td>烹饪方式</td>
+                                <td>适合生食、沙拉、做水果拼盘</td>
+                                <td>适合炒菜、腌制、煲汤</td>
+                            </tr>
+                            <tr>
+                                <td>价格</td>
+                                <td>通常较高</td>
+                                <td>通常较低</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        小黄瓜可以带皮吃吗？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        可以。小黄瓜的皮非常薄且嫩，清洗干净后带皮食用营养更丰富。但如果担心农药残留，建议去皮或使用盐搓洗。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        小黄瓜放久了变黄还能吃吗？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        不建议食用。当小黄瓜表皮变黄时，说明已经过熟，内部纤维化严重，口感会变得很差，且营养价值会大幅降低。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        小黄瓜有哪些禁忌人群？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        脾胃虚寒、容易腹泻的人群应少吃或不生吃。此外，由于黄瓜含有维生素C分解酶，正在服用维生素C补充剂的人群建议间隔时间食用。
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于小黄瓜</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        本站致力于提供关于小黄瓜的全面科普知识，包括种植、挑选、营养及食谱。我们专注于分享健康、自然的饮食生活方式。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#nutrition">营养价值</a></li>
+                        <li><a href="#selection">挑选技巧</a></li>
+                        <li><a href="#recipes">食谱大全</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 小黄瓜百科. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
